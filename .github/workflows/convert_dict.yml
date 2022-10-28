@@ -21,12 +21,12 @@ jobs:
       uses: jurplel/install-qt-action@v3
       with:
         modules: "qtwebengine"
-    - run: |
-        cp "$(dirname $(whereis qt | cut -d ' ' -f2))/qwebengine_convert_dict" ./qwebengine_convert_dict
-    - name: Upload file
-      uses: softprops/action-gh-release@v1
-      with:
-        name: "${inputs.os}} qwebengine_convert_dict"
-        files: qwebengine_convert_dict
-#   - name: Setup tmate session
-#      uses: mxschmitt/action-tmate@v3
+#    - run: |
+#        cp "$(dirname $(whereis qt | cut -d ' ' -f2))/qwebengine_convert_dict" ./qwebengine_convert_dict
+#    - name: Upload file
+#      uses: softprops/action-gh-release@v1
+#      with:
+#        name: "${inputs.os}} qwebengine_convert_dict"
+#        files: qwebengine_convert_dict
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3
