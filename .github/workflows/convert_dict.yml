@@ -22,7 +22,7 @@ jobs:
       with:
         modules: "qtwebengine"
     - run: |
-        cp $(whereis qt | cut -d ' ' -f2)/../qwebengine_convert_dict ./qwebengine_convert_dict
+        cp "$(dirname $(whereis qt | cut -d ' ' -f2))/qwebengine_convert_dict" ./qwebengine_convert_dict
     - name: Upload file
       uses: softprops/action-gh-release@v1
       with:
